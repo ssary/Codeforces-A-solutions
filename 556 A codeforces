@@ -1,0 +1,28 @@
+//link of the problem : http://codeforces.com/contest/556/problem/A
+// author : sary nasser
+//the solution is based on that you count number of zeros and ones in the string and then
+// cout << their number - min of ones and zeros (*2) -- > to count the ones taken with zeros(min)..
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n =0 , one =0 , zero=0;
+    cin >> n ;
+    string s;
+    cin >> s;
+    for(int i=0;i<n;i++){
+
+        if(s[i]== '0')
+            zero ++;
+
+        else
+            one++;
+            }
+
+    cout << n - (min(zero,one)*2)<<endl;
+
+    return 0;
+}
